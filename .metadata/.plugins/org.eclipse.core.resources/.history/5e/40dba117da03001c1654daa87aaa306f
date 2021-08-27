@@ -1,0 +1,15 @@
+package com.restapiservices.test.services;
+
+import java.util.List;
+
+import com.restapiservices.test.entities.Order;
+
+public interface OrderService {
+
+	public List<Order> getAllOrders();
+	public Order getOrderById(long id);
+	public Order createOrder(Order c);
+	public Order updateOrder(Order c);
+	public void deleteOrder(long id);
+	
+}

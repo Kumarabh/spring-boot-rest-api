@@ -1,0 +1,46 @@
+package com.restapiservices.test.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.restapiservices.test.entities.Order;
+import com.restapiservices.test.repository.OrderRepository;
+
+public class OrderServiceImpl implements OrderService{
+
+	OrderRepository repo;
+	@Override
+	public List<Order> getAllOrders() {
+		// TODO Auto-generated method stub
+		return this.repo.findAll();
+	}
+
+	@Override
+	public Order getOrderById(long id) {
+		// TODO Auto-generated method stub
+		return this.repo.getById(id);
+	}
+
+	@Override
+	public Order createOrder(Order c) {
+		// TODO Auto-generated method stub
+		return this.repo.save(c);
+	}
+
+	@Override
+	public Order updateOrder(Order c) {
+		// TODO Auto-generated method stub
+		Optional<Order> orderdb = this.repo.getById(c.getOrderId());
+		
+		return null;
+	}
+
+	@Override
+	public void deleteOrder(long id) {
+		// TODO Auto-generated method stub
+		this.repo.deleteById(id);
+		
+	}
+
+
+}

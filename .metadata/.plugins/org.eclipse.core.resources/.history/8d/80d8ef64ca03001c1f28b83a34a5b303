@@ -1,0 +1,5 @@
+package com.restapiservices.test.repository;
+
+public class CustomerRepository {
+
+}

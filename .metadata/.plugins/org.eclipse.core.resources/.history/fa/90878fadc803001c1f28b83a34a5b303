@@ -1,0 +1,5 @@
+package com.restapiservices.test.entities;
+
+public class Order {
+
+}
